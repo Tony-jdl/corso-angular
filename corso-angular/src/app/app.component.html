@@ -6,6 +6,16 @@
     <input matInput placeholder="Ex. Pizza" [(ngModel)]="title">
     <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
 </mat-form-field>
-<p>input: {{input}}</p>
-<p>titolo: {{title}}</p>
 
+<!-- <p *ngIf="isVisible; else bloccoElse">Sono visibile</p>
+<ng-template #bloccoElse>
+    <p>Non sono visibile</p>
+</ng-template> -->
+
+<p *ngIf="isVisible; then bloccoIf else bloccoElse">Sono visibile</p>
+<ng-template #bloccoIf>
+    <p>Blocco IF</p>
+</ng-template>
+<ng-template #bloccoElse>
+    <p>Blocco Else</p>
+</ng-template>
