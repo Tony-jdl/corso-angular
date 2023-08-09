@@ -1,21 +1,18 @@
 <!-- <button mat-raised-button color="primary" (click)="onClick(this)">Primary</button> -->
 
 
-<mat-form-field class="example-full-width">
+<!-- <mat-form-field class="example-full-width">
     <mat-label>Favorite food</mat-label>
     <input matInput placeholder="Ex. Pizza" [(ngModel)]="title">
     <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
-</mat-form-field>
+</mat-form-field> -->
 
-<!-- <p *ngIf="isVisible; else bloccoElse">Sono visibile</p>
-<ng-template #bloccoElse>
-    <p>Non sono visibile</p>
-</ng-template> -->
+<!-- <div *ngFor="let persona of persone">
+    <p><strong>Nome:</strong>{{persona.nome}} - <strong>Cognome:</strong> {{persona.cognome}}</p>
+    <p *ngIf="persona.online" class="online"></p>
+    <p *ngIf="!persona.online" class="offline"></p>
+</div> -->
 
-<p *ngIf="isVisible; then bloccoIf else bloccoElse">Sono visibile</p>
-<ng-template #bloccoIf>
-    <p>Blocco IF</p>
-</ng-template>
-<ng-template #bloccoElse>
-    <p>Blocco Else</p>
-</ng-template>
+<div *ngFor="let persona of persone; index as i; count as c; first as isFirst; last as isLast; even as isEven, odd as isOdd">
+    <p>Index: {{i}} - Count:{{c}} - First:{{isFirst}} - Last:{{isLast}} - Last: {{isEven}} - Odd:{{isEven}} - Nome: {{persona.nome}} - Cognome: {{persona.cognome}}</p>
+</div>

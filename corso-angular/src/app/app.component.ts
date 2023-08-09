@@ -9,6 +9,11 @@ export class AppComponent {
   title = 'corso-angular';
   input="";
   isVisible = true;
+  persone = [
+    {nome: "Luca", cognome: "Rossi", online: true},
+    {nome: "Marco", cognome: "Verdi", online: false},
+    {nome: "Anna", cognome: "Neri", online: true},
+  ]
 
   onInput(event:Event){
     this.input = (<HTMLInputElement>event.target).value;
