@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'corso-angular';
-
+  input="";
   onInput(event:Event){
-    /* console.log(event);
-    console.log((<HTMLInputElement>event.target)); */
-    console.log((<HTMLInputElement>event.target).value);
+    this.input = (<HTMLInputElement>event.target).value;
+  }
+
+  onClick(event:Event){
+    this.title = this.input;
   }
 }
