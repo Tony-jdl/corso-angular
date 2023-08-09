@@ -13,7 +13,10 @@ export class AppComponent {
     {nome: "Luca", cognome: "Rossi", online: true},
     {nome: "Marco", cognome: "Verdi", online: false},
     {nome: "Anna", cognome: "Neri", online: true},
-  ]
+  ];
+
+  numero = 0;
+  stringa = "topolino"
 
   onInput(event:Event){
     this.input = (<HTMLInputElement>event.target).value;

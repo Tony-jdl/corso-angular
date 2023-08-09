@@ -13,6 +13,18 @@
     <p *ngIf="!persona.online" class="offline"></p>
 </div> -->
 
-<div *ngFor="let persona of persone; index as i; count as c; first as isFirst; last as isLast; even as isEven, odd as isOdd">
-    <p>Index: {{i}} - Count:{{c}} - First:{{isFirst}} - Last:{{isLast}} - Last: {{isEven}} - Odd:{{isEven}} - Nome: {{persona.nome}} - Cognome: {{persona.cognome}}</p>
+<div [ngSwitch]="numero">
+    <p *ngSwitchCase="1">uno</p>
+    <p *ngSwitchCase="2">due</p>
+    <p *ngSwitchCase="3">tre</p>
+    <p *ngSwitchCase="4">quatro</p>
+    <p *ngSwitchDefault>default</p>
+</div>
+
+<div [ngSwitch]="stringa">
+    <p *ngSwitchCase="'pippo'">pippo</p>
+    <p *ngSwitchCase="'pluto'">pluto</p>
+    <p *ngSwitchCase="'topolino'">topolino</p>
+    <p *ngSwitchCase="'paperino'">paperino</p>
+    <p *ngSwitchDefault>default</p>
 </div>
