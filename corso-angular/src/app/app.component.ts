@@ -15,6 +15,8 @@ export class AppComponent {
     {nome: "Anna", cognome: "Neri", online: true},
   ];
 
+  color = 'green'
+
   numero = 0;
   stringa = "topolino"
 

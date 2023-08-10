@@ -13,18 +13,9 @@
     <p *ngIf="!persona.online" class="offline"></p>
 </div> -->
 
-<div [ngSwitch]="numero">
-    <p *ngSwitchCase="1">uno</p>
-    <p *ngSwitchCase="2">due</p>
-    <p *ngSwitchCase="3">tre</p>
-    <p *ngSwitchCase="4">quatro</p>
-    <p *ngSwitchDefault>default</p>
-</div>
-
-<div [ngSwitch]="stringa">
-    <p *ngSwitchCase="'pippo'">pippo</p>
-    <p *ngSwitchCase="'pluto'">pluto</p>
-    <p *ngSwitchCase="'topolino'">topolino</p>
-    <p *ngSwitchCase="'paperino'">paperino</p>
-    <p *ngSwitchDefault>default</p>
-</div>
+<ul>
+    <li *ngFor="let persona of persone">
+        <div class="cerchio" [ngStyle]="{'background': persona.online ? 'green' : ' red'}"></div>
+        <p>{{persona.nome}} - {{persona.cognome}}</p>
+    </li>
+</ul>
