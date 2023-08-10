@@ -7,24 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'corso-angular';
-  input="";
-  isVisible = true;
   persone = [
-    {nome: "Luca", cognome: "Rossi", online: true},
-    {nome: "Marco", cognome: "Verdi", online: false},
-    {nome: "Anna", cognome: "Neri", online: true},
+    {nome: "Luca", cognome: "Rossi", online: true, color: "blue"},
+    {nome: "Marco", cognome: "Verdi", online: false, color: "red"},
+    {nome: "Anna", cognome: "Neri", online: true, color: "green"},
   ];
 
-  color = 'green'
-
-  numero = 0;
-  stringa = "topolino"
-
-  onInput(event:Event){
-    this.input = (<HTMLInputElement>event.target).value;
-  }
-
-  onClick(event:Event){
-    this.title = this.input;
+  onClick(){
+    this.persone = [
+      {nome: "Ugo", cognome: "Bianchi", online: true, color: "blue"},
+      {nome: "Maria", cognome: "Gialli", online: false, color: "blue"},
+      {nome: "Andrea", cognome: "Verdi", online: true, color: "pink"},
+    ];
   }
 }

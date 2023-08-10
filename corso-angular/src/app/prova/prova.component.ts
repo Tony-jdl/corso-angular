@@ -1,26 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-prova',
   templateUrl: './prova.component.html',
   styleUrls: ['./prova.component.css']
 })
-export class ProvaComponent implements OnInit{
+export class ProvaComponent implements OnInit, OnChanges{
+  @Input() persone: any; // serve per importare persone dal componente padre
 
-  isDisabled = true;
-  immagine = "";
-  immagine1 = "https://material.angular.io/assets/img/examples/shiba2.jpg";
-  immagine2 = "";
+  constructor(){ }
 
-  constructor(){
-    console.log("costruttore");
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
   }
-  ngOnInit(){
-    console.log("ngOnInit")
-    let counter = 0;
-    setInterval(()=>{
-      (counter%2 == 0) ? (this.immagine = this.immagine1) : (this.immagine = this.immagine2);
-      counter++;
-    }, 1000)
+  ngOnInit():void {
+    console.log(this.persone);
   }
 }
