@@ -14,8 +14,9 @@
 </div> -->
 
 <ul>
-    <li *ngFor="let persona of persone">
-        <div class="cerchio" [ngStyle]="{'background': persona.online ? 'green' : ' red'}"></div>
+    <li *ngFor="let persona of persone; index as i">
+        <!-- <div class="cerchio" [ngClass]="{'cerchioOnline':persona.online, 'cerchioOffline': !persona.online}">{{i}}</div> -->
+        <div class="cerchio" [ngClass]="persona.online ? 'cerchioOnline' : 'cerchioOffline'">{{i}}</div>
         <p>{{persona.nome}} - {{persona.cognome}}</p>
     </li>
 </ul>

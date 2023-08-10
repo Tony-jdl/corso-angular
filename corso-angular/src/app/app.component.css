@@ -1,22 +1,17 @@
-.online{
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
+.cerchioOnline{
     background-color: green;
+    color: white;
 }
 
-.offline{
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
+.cerchioOffline{
     background-color: red;
+    color: orange;
 }
 
 .cerchio{
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background: blue;
     margin-right: 10px;
 }
 
@@ -28,4 +23,8 @@ li{
 
 li > p{
     margin-bottom: 0;
+}
+
+.prova{
+    border-radius: 0%;
 }
