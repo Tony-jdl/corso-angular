@@ -1,19 +1,21 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-prova',
   templateUrl: './prova.component.html',
   styleUrls: ['./prova.component.css']
 })
-export class ProvaComponent implements OnInit, OnChanges{
-  @Input() persone: any; // serve per importare persone dal componente padre
+export class ProvaComponent implements OnInit{
+  @Output() mandaDatiEvento = new EventEmitter<string>()
+
+  nome = 'Luca';
 
   constructor(){ }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
+    ngOnInit():void {
   }
-  ngOnInit():void {
-    console.log(this.persone);
+
+  mandaDati() {
+    this.mandaDatiEvento.emit(this.nome);
   }
 }
